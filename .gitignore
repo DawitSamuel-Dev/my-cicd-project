@@ -23,3 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 .env
+# Ignore Terraform state and working files
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
