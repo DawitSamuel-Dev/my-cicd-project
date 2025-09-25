@@ -1,0 +1,26 @@
+name: Deploy Static Website to AWS S3
+
+on:
+  push:
+    branches:
+      - main # The pipeline runs when code is pushed to the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # The virtual machine running the job
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3 # Get the latest code from GitHub
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Deploy to S3
+        # The 'aws s3 sync' command copies files from the local directory to the S3 bucket
+        run: |
+          aws s3 sync . s3://dawitsamuel-cicd-website-bucket-2025 --delete

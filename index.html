@@ -48,13 +48,10 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-image: url('public/PPIC.jpg');
+            background-size: cover;
+            background-position: center;
             border: 4px solid #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: #ffffff;
             margin: 0 auto 1.5rem;
             position: relative;
             overflow: hidden;
@@ -141,7 +138,7 @@
         .hero-section {
             height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('./public/Gemini_Generated_Image_d8riuod8riuod8ri.png') center/cover;
+                        url('public/Gemini_Generated_Image_d8riuod8riuod8ri.png') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -469,14 +466,7 @@
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
         <div class="profile-section">
-            <div class="profile-img w-40 h-40 rounded-full overflow-hidden border-4 border-green-500 shadow-lg mx-auto bg-gray-200 flex items-center justify-center">
-                <img
-                src="src/assets/profile.jpg"
-                alt="Dawit Samuel"
-                  class="w-[120%] object-contain object-top"
-                  />
-            
-                                                                                    
+            <div class="profile-img">
             </div>
             <h1 class="name">Dawit Samuel</h1>
             <p class="subtitle">Available for work</p>
@@ -534,7 +524,6 @@
             <div class="scroll-indicator">
                 <i class="fas fa-chevron-down"></i>
             </div>
-            
         </section>
 
         <!-- About Section -->
